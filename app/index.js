@@ -25,7 +25,7 @@ KnockoutBindingGenerator.prototype.askFor = function askFor() {
 
   var prompts = [{
     name: 'name',
-    message: 'What is the name of your binding? Will be appended to knockout.bindingHandlers.',
+    message: 'What is the name of your binding? knockout.bindingHandlers.',
   },{
     name: 'username',
     message: 'What is your github username? Used for the demo page.',
@@ -58,6 +58,7 @@ KnockoutBindingGenerator.prototype.app = function app() {
   this.copy('_bower.json', 'bower.json');
   this.copy('_karma.conf.js', 'karma.conf.js');
   this.copy('_Gruntfile.js', 'Gruntfile.js');
+  this.copy('_README.md', 'README.md');
 };
 
 KnockoutBindingGenerator.prototype.projectfiles = function projectfiles() {
