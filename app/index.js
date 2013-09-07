@@ -25,12 +25,15 @@ KnockoutBindingGenerator.prototype.askFor = function askFor() {
 
   var prompts = [{
     name: 'name',
-    message: 'What is the name of your binding?',
-
+    message: 'What is the name of your binding? Will be appended to knockout.bindingHandlers.',
+  },{
+    name: 'username',
+    message: 'What is your github username? Used for the demo page.',
   }];
 
   this.prompt(prompts, function (props) {
     this.name = props.name.toLowerCase();
+    this.username = props.username;
     this.prettyName = this.name[0].toUpperCase() + this.name.substr(1);
 
     cb();
