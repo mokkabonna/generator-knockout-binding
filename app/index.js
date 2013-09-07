@@ -33,8 +33,8 @@ KnockoutBindingGenerator.prototype.askFor = function askFor() {
 
   this.prompt(prompts, function (props) {
     this.name = props.name.toLowerCase();
-    this.username = props.username;
     this.prettyName = this.name[0].toUpperCase() + this.name.substr(1);
+    this.username = props.username;
 
     cb();
   }.bind(this));
