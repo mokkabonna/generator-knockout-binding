@@ -1,16 +1,16 @@
 {
-  "name": "knockout.bindingHandlers.<%= name %>",
-  "main": "src/<%=name%>",
-  "version": "0.0.0",
-  "ignore": [
-    "**/*"
-  ],
-  "dependencies": {
-    "knockout.js": ">=2.0.0"
-  },
-  "devDependencies": {
-    "requirejs": "2.0.6",
-    "bootstrap": "~3.0.0"
-  }
+    "name": "knockout.bindingHandlers.<%= name %>",
+    "main": "src/<%=name%>",
+    "version": "0.0.0",
+    "ignore": [
+        "**/*"
+    ],
+    "dependencies": {
+        "knockout.js": ">=2.0.0"
+    },
+    "devDependencies": {
+        "requirejs": "2.0.6",
+        "bootstrap": "~3.0.0",
+        "almond": "~0.2.6"
+    }
 }
-
