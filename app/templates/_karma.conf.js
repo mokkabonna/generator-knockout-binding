@@ -6,7 +6,7 @@ module.exports = function(config) {
         // base path, that will be used to resolve files and exclude
         basePath: '',
 
-        frameworks: ["requirejs", "qunit"],
+        frameworks: ["requirejs",],
 
 
         // list of files / patterns to load in the browser
@@ -22,10 +22,11 @@ module.exports = function(config) {
             }, {
                 pattern: 'lib/knockout.js/knockout.js',
                 included: false
-            }, {
-                pattern: 'tests/lib/helper.js',
-                included: false
             },
+            //still relying on node plugin qunit lib, but using own adaptor
+            'node_modules/karma-qunit/lib/qunit.js',
+            'tests/lib/qunit-adaptor.js',
+            'tests/lib/helper.js',
             'tests/lib/runner.js',
         ],
 

@@ -4,11 +4,10 @@
  * @param  {[type]} $ [description]
  * @return {[type]}   [description]
  */
-define(['jquery'], function($) {
+define('helper', ['jquery'], function($) {
 	'use strict';
 	var mod = QUnit.module;
 	var self = this;
-
 	module = function(name, lifecycle) {
 		var self = this;
 		if (lifecycle) {
@@ -24,6 +23,8 @@ define(['jquery'], function($) {
 				fixture.remove();
 				if (typeof teardown === 'function') teardown.call(this); //call with current lifecycle
 			};
+
+			delete lifecycle.fixture;
 		}
 
 		mod(name, lifecycle);
