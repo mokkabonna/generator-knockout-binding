@@ -1,25 +1,26 @@
 {
-    "name": "noname",
-    "version": "0.0.0",
-    "devDependencies": {
-        "grunt": "~0.4.1",
-        "grunt-contrib-watch": "~0.4.4",
-        "grunt-contrib-jshint": "~0.6.0",
-        "grunt-contrib-copy": "~0.4.1",
-        "grunt-bower-task": "~0.3.1",
-        "grunt-gh-pages": "~0.7.1",
-        "grunt-karma": "~0.6.1",
-        "karma-script-launcher": "~0.1.0",
-        "karma-firefox-launcher": "~0.1.0",
-        "karma-chrome-launcher": "~0.1.0",
-        "karma-requirejs": "~0.1.0",
-        "karma-phantomjs-launcher": "~0.1.0",
-        "karma": "~0.10.1",
-        "karma-qunit": "~0.1.0",
-        "grunt-bower-verify": "~0.3.0",
-        "grunt-contrib-requirejs": "~0.4.1"
-    },
-    "scripts": {
-        "test": "grunt test:full"
-    }
+  "name": "noname",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-bower-task": "~0.3.1",
+    "grunt-gh-pages": "~0.7.1",
+    "grunt-karma": "~0.6.1",
+    "karma-script-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-requirejs": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.1",
+    "karma-qunit": "~0.1.0",
+    "grunt-bower-verify": "~0.3.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-text-replace": "~0.3.7"
+  },
+  "scripts": {
+    "test": "grunt test:full"
+  }
 }
