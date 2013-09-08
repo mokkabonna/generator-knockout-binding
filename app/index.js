@@ -66,5 +66,6 @@ KnockoutBindingGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('bowerrc', '.bowerrc');
   this.copy('travis.yml', '.travis.yml');
   this.copy('editorconfig', '.editorconfig');
+  this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
 };
