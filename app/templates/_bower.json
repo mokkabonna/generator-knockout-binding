@@ -1,6 +1,6 @@
 {
     "name": "knockout.bindingHandlers.<%= name %>",
-    "main": "src/<%=name%>",
+    "main": "src/<%=name%>.js",
     "version": "0.0.0",
     "ignore": [
         "**/*"
