@@ -26,7 +26,7 @@
                 install: {},
             },
             //This task will install all versions of dependencies defined in bower.json and run the tests for all of them
-            "bower-verify": {
+            'bower-verify': {
                 options: {
                     showTasksOutput: false,
                     completeOnError: true,
@@ -35,7 +35,7 @@
                     tasks: ['karma:once']
                 }
             },
-            "gh-pages": {
+            'gh-pages': {
                 options: {
                     base: 'dist'
                 },
@@ -67,10 +67,10 @@
                         include: 'demo',
                         insertRequire: ['demo'],
                         wrap: true,
-                        baseUrl: "./",
+                        baseUrl: './',
                         optimize: 'none',
-                        mainConfigFile: "demo.js",
-                        out: "dist/demo.js"
+                        mainConfigFile: 'demo.js',
+                        out: 'dist/demo.js'
                     }
                 }
             },

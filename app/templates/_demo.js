@@ -7,9 +7,8 @@ require.config({
 });
 
 
-require(['knockout', 'src/<%=name%>'], function(ko, <%= name %> ) {
-    ko.bindingHandlers. <%= name %> = <%= name %> ; //attach the binding
-
+require(['knockout', 'src/<%=name%>'], function(ko, <%= name %>) {
+    ko.bindingHandlers.<%= name %> = <%= name %>; //attach the binding
 
     //implement here the demo of your binding
     var viewModel = {
