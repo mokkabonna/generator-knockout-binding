@@ -8,7 +8,7 @@
 		}
 	});
 
-	require(['tests/lib/helper', 'tests/<%=name%>'], function() {
+	require(['helper', 'tests/<%=name%>'], function() {
 		window.__karma__.start();
 	});
 

@@ -3,7 +3,17 @@
     "main": "src/<%=name%>.js",
     "version": "0.0.0",
     "ignore": [
-        "**/*"
+        "dist",
+        "lib",
+        "node_modules",
+        "tests",
+        "Gruntfile.js",
+        "README.md",
+        "bower.json",
+        "demo.html",
+        "demo.js",
+        "karma.conf.js",
+        "package.json"
     ],
     "dependencies": {
         "knockout.js": ">=2.0.0"

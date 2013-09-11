@@ -6,7 +6,7 @@ module.exports = function(config) {
         // base path, that will be used to resolve files and exclude
         basePath: '',
 
-        frameworks: ["requirejs",],
+        frameworks: ["requirejs"],
 
 
         // list of files / patterns to load in the browser
