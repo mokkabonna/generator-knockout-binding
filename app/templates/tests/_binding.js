@@ -1,7 +1,7 @@
 define(['knockout', 'src/<%=name%>'], function(ko, <%= name %>) {
 
 	module('<%=prettyName%>', {
-		fixture: '<input id="input" data-bind="<%=name&>:obs">',,
+		fixture: '<input id="input" data-bind="<%=name%>:obs">',
 		setup: function() {
 			ko.bindingHandlers.<%= name %> = <%= name %>;
 			this.input = $('#input');
