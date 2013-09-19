@@ -68,4 +68,5 @@ KnockoutBindingGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
+  this.copy('tests/jshintrc', 'tests/.jshintrc');
 };
