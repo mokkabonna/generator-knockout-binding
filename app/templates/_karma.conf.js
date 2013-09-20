@@ -24,7 +24,7 @@ module.exports = function(config) {
                 included: false
             },
             //still relying on node plugin qunit lib, but using own adaptor
-            'node_modules/karma-qunit/lib/qunit.js',
+            'node_modules/qunitjs/qunit/qunit.js',
             'tests/lib/qunit-adaptor.js',
             'tests/lib/helper.js',
             'tests/lib/runner.js',

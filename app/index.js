@@ -69,4 +69,5 @@ KnockoutBindingGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
   this.copy('tests/jshintrc', 'tests/.jshintrc');
+  this.copy('tests/lib/qunit-adapter.js', 'tests/lib/qunit-adapter.js');
 };
