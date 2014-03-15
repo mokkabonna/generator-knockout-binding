@@ -9,6 +9,6 @@
     "knockout.js": ">=2.0.0"
   },
   "devDependencies": {
-    "requirejs": "2.0.6"
+    "requirejs": "*"
   }
 }
