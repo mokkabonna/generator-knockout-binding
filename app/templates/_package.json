@@ -16,6 +16,6 @@
     "karma-mocha": "*"
   },
   "scripts": {
-    "test": "grunt test:full"
+    "test": "bower install && grunt test:full"
   }
 }
