@@ -11,7 +11,7 @@ define(['knockout', 'module'], function(ko, module) {
     update: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
       //add update logic here
       //sample for scaffolding purposes
-      element.value = ko.unwrap(valueAccessor());
+      element.value = ko.utils.unwrapObservable(valueAccessor());
     }
   };
 });
