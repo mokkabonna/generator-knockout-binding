@@ -11,7 +11,7 @@ define(['knockout', 'src/<%=name%>'], function(ko, <%= prettyName %> ) {
         obs: ko.observable()
       };
 
-      ko.applyBindings(this.viewModel, document.body);
+      ko.applyBindings(viewModel, document.body);
     });
 
     afterEach(function() {
