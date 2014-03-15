@@ -13,12 +13,9 @@ module.exports = function(config) {
       pattern: 'src/**.js',
       included: false
     }, {
-      pattern: 'spec/**.js',
+      pattern: 'spec/<%=name%>.js',
       included: false
-    }, {
-      pattern: 'spec/test-main.js',
-      included: true
-    }],
+    }, 'spec/test-main.js'],
 
     exclude: [],
 
