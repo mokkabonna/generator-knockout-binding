@@ -1,3 +1,4 @@
+/* jshint boss:true*/
 define(['knockout', 'module'], function(ko, module) {
   'use strict';
 
