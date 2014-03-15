@@ -44,6 +44,6 @@
 
     //For testing
     grunt.registerTask('test', ['jshint', 'karma:once']);
-    grunt.registerTask('test:full', ['jshint', 'bower-verify']);
+    grunt.registerTask('test:full', ['jshint', 'bowerVerify']);
   };
 })();
