@@ -5,4 +5,4 @@ require.config({
   }
 });
 
-require(['helper', 'tests/<%=name%>'], window.__karma__.start);
+require(['spec/<%=name%>'], window.__karma__.start);
