@@ -19,7 +19,7 @@
           tasks: ['jshint', 'karma:server:run']
         }
       },
-      'bower-verify': {
+      bowerVerify: {
         test: {
           tasks: ['karma:once']
         }
