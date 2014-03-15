@@ -1,37 +1,34 @@
 # <%=prettyName%> binding for knockout
 
-[![Build status](https://travis-ci.org/mokkabonna/knockout.bindingHandlers.<%=name%>.png)](https://travis-ci.org/<%=username%>/knockout.bindingHandlers.<%=name%>)
+[![Build status](https://travis-ci.org/<%=username%>/knockout.bindingHandlers.<%=name%>.png)](https://travis-ci.org/<%=username%>/knockout.bindingHandlers.<%=name%>)
 
 ## Usage
 
 HTML
 
-	<input data-bind="<%=name%> : myobs" >
+    <input data-bind="<%=name%>: myobs" >
 
 JS
 
-	ko.applyBindings({
-		myobs : ko.observable()
-	});
+    ko.applyBindings({
+        myobs : ko.observable()
+    });
 
 
-This binding is written in AMD. It returns the binding object. You need to attach it yourself since this allows it to coexist with other possible bindings named <%=name%>. This will only need to be done once as it will then be attached to the knockout module.
+This binding is written in AMD. It returns the binding object. It will attach itself to `knockout.bindingHandlers.<%=name%>` once required for the first time. This can be overridden with a config section in your requirejs config like shown below.
 
-	define(['knockout', 'somefolder/<%=name%>'], function(ko, <%=name%>){
-		ko.bindingHandlers.<%=name%> = <%=name%>;
-		//use knockout
-	});
+```
+requirejs.config({
+    config: {
+        'bower_components/knockout.bindingHandlers.<%=name%>/src/<%=name%>': {
+            name: 'someOtherName'
+    }
+});
+```
 
 ## Behaviour
 
 TODO:
-
-### valueUpdate
-
-
-## Demo
-
-There is a demo at http://<%=username%>.github.io/knockout.bindingHandlers.<%=name%>
 
 ## Dependencies
 
@@ -43,8 +40,7 @@ For accurate versions check bower.json
 
 Clone, then run (assuming you have node)
 
-    npm install
-    grunt bower //this is to install all bower packages
+    npm install & bower install
 
 You can now use grunt develop for a ready made watch task for development. Tests, linting..
 
