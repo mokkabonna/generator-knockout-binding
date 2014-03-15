@@ -28,9 +28,6 @@ KnockoutBindingGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     name: 'name',
     message: 'What is the name of your binding? knockout.bindingHandlers.',
-  },{
-    name: 'username',
-    message: 'What is your github username? Used for the demo page.',
   }];
 
   this.prompt(prompts, function (props) {
@@ -44,16 +41,12 @@ KnockoutBindingGenerator.prototype.askFor = function askFor() {
 
 KnockoutBindingGenerator.prototype.app = function app() {
   this.mkdir('src');
-  this.mkdir('tests');
+  this.mkdir('spec');
 
   this.copy('src/_binding.js', 'src/'+ this.name +'.js');
 
-  this.copy('_demo.js', 'demo.js');
-  this.copy('_demo.html', 'demo.html');
-
-  this.copy('tests/_binding.js', 'tests/'+ this.name +'.js');
-  this.copy('tests/_runner.js', 'tests/lib/runner.js');
-  this.copy('tests/_helper.js', 'tests/lib/helper.js');
+  this.copy('spec/_binding.js', 'spec/'+ this.name +'.js');
+  this.copy('spec/_test-main.js', 'spec/test-main.js');
 
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
@@ -63,11 +56,9 @@ KnockoutBindingGenerator.prototype.app = function app() {
 };
 
 KnockoutBindingGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('bowerrc', '.bowerrc');
   this.copy('travis.yml', '.travis.yml');
   this.copy('editorconfig', '.editorconfig');
   this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
-  this.copy('tests/jshintrc', 'tests/.jshintrc');
-  this.copy('tests/lib/qunit-adapter.js', 'tests/lib/qunit-adapter.js');
+  this.copy('spec/jshintrc', 'spec/.jshintrc');
 };

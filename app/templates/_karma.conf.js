@@ -11,7 +11,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [{
-        pattern: 'tests/<%=name%>.js',
+        pattern: 'spec/<%=name%>.js',
         included: false
       }, {
         pattern: 'src/<%=name%>.js',
@@ -20,9 +20,7 @@ module.exports = function(config) {
         pattern: 'bower_components/knockout.js/knockout.js',
         included: false
       },
-      //still relying on node plugin qunit lib, but using own adaptor
-      'tests/lib/helper.js',
-      'tests/lib/runner.js',
+      'spec/test-main.js',
     ],
 
     // list of files to exclude

@@ -3,17 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.4.4",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-bower-task": "~0.3.1",
-    "grunt-karma": "~0.6.1",
-    "karma-script-launcher": "~0.1.0",
-    "karma-requirejs": "~0.1.0",
-    "karma-phantomjs-launcher": "~0.1.0",
-    "karma": "~0.10.1",
-    "karma-mocha": "~0.10.1"
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-karma": "*",
+    "karma-script-launcher": "*",
+    "karma-requirejs": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma": "*",
+    "karma-mocha": "*"
   },
   "scripts": {
     "test": "grunt test:full"
