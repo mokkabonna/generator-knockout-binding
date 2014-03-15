@@ -2,6 +2,7 @@
 (function() {
   'use strict';
   module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt); // Load grunt tasks automatically
     // Project configuration.
     grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
@@ -32,9 +33,6 @@
         },
       }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-karma');
 
     //For development
     grunt.registerTask('develop', ['jshint', 'karma:server', 'watch:scripts']);
