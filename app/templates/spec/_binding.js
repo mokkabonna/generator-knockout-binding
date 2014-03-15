@@ -19,7 +19,7 @@ define(['knockout', 'src/<%=name%>'], function(ko, <%= prettyName %> ) {
     });
 
     it('should be tested', function() {
-      expect(true).to.be.false();
+      expect(true).to.be(false);
     });
 
   });
