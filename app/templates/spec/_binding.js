@@ -1,27 +1,26 @@
 define(['knockout', 'src/<%=name%>'], function(ko, <%= prettyName %> ) {
 
-  describe('<%=prettyName%>', function() {
-
+  describe(' <%= prettyName %>', function() {
     var viewModel;
+    var root;
 
     beforeEach(function() {
       document.body.innerHTML = '<input id="input" data-bind="<%=name%>:obs">';
-
+      root = document.getElementById('input');
       viewModel = {
         obs: ko.observable()
       };
 
-      ko.applyBindings(viewModel, document.body);
+      ko.applyBindings(viewModel, root);
     });
 
     afterEach(function() {
-      ko.cleanNode(document.body);
+      ko.cleanNode(root);
     });
 
-    it('should be tested', function() {
-      expect(true).to.be(false);
+    it('should be bound', function() {
+      expect(ko.dataFor(root)).to.be(viewModel);
     });
 
   });
-
 });
