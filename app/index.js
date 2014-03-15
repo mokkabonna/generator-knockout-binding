@@ -7,11 +7,14 @@ var yeoman = require('yeoman-generator');
 var KnockoutBindingGenerator = module.exports = function KnockoutBindingGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
   var self = this;
-  this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] , callback : function() {
-      console.log('Installed dependencies.');
-      console.log(self.readFileAsString(path.join(__dirname, 'instructions.txt')));
-    }});
+  this.on('end', function() {
+    this.installDependencies({
+      skipInstall: options['skip-install'],
+      callback: function() {
+        console.log('Installed dependencies.');
+        console.log(self.readFileAsString(path.join(__dirname, 'instructions.txt')));
+      }
+    });
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
@@ -28,9 +31,12 @@ KnockoutBindingGenerator.prototype.askFor = function askFor() {
   var prompts = [{
     name: 'name',
     message: 'What is the name of your binding? knockout.bindingHandlers.',
+  }, {
+    name: 'username',
+    message: 'What is your github username? Used for travis build images.',
   }];
 
-  this.prompt(prompts, function (props) {
+  this.prompt(prompts, function(props) {
     this.name = props.name.toLowerCase();
     this.prettyName = this.name[0].toUpperCase() + this.name.substr(1);
     this.username = props.username;
@@ -43,9 +49,9 @@ KnockoutBindingGenerator.prototype.app = function app() {
   this.mkdir('src');
   this.mkdir('spec');
 
-  this.copy('src/_binding.js', 'src/'+ this.name +'.js');
+  this.copy('src/_binding.js', 'src/' + this.name + '.js');
 
-  this.copy('spec/_binding.js', 'spec/'+ this.name +'.js');
+  this.copy('spec/_binding.js', 'spec/' + this.name + '.js');
   this.copy('spec/_test-main.js', 'spec/test-main.js');
 
   this.copy('_package.json', 'package.json');
