@@ -5,6 +5,7 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-watch": "*",
+    "load-grunt-tasks": "*",
     "grunt-contrib-jshint": "*",
     "grunt-karma": "*",
     "karma-requirejs": "*",
