@@ -19,6 +19,11 @@
           tasks: ['jshint', 'karma:server:run']
         }
       },
+      'bower-verify': {
+        test: {
+          tasks: ['karma:once']
+        }
+      },
       karma: {
         options: {
           configFile: 'karma.conf.js'
@@ -39,5 +44,6 @@
 
     //For testing
     grunt.registerTask('test', ['jshint', 'karma:once']);
+    grunt.registerTask('test:full', ['jshint', 'bower-verify']);
   };
 })();
