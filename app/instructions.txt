@@ -1,8 +1,8 @@
+
 How to get going:
 
 "grunt develop" starts a watch task for linting and running tests.
 
 The binding is located in the src folder.
-When you are done (and setup git remote to github) run grunt publish to build demo and publish to github pages.
 
 Happy coding!

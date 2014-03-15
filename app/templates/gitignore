@@ -1,3 +1,1 @@
-/lib
-.grunt
-dist
+bower_components

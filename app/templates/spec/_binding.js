@@ -1,4 +1,4 @@
-define(['knockout', 'src/<%=name%>'], function(ko, <%= prettyName %> ) {
+define(['knockout', 'src/<%=name%>'], function(ko, <%= prettyName %>) {
 
   describe(' <%= prettyName %>', function() {
     var viewModel;

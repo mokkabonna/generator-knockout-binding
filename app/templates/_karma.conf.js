@@ -4,29 +4,23 @@
 module.exports = function(config) {
   'use strict';
   config.set({
-    // base path, that will be used to resolve files and exclude
     basePath: '',
-
     frameworks: ['requirejs', 'mocha', 'expect'],
-
-    // list of files / patterns to load in the browser
     files: [{
-        pattern: 'spec/<%=name%>.js',
-        included: false
-      }, {
-        pattern: 'src/<%=name%>.js',
-        included: false
-      }, {
-        pattern: 'bower_components/knockout.js/knockout.js',
-        included: false
-      },
-      'spec/test-main.js',
-    ],
+      pattern: 'bower_components/**/*.js',
+      included: false
+    }, {
+      pattern: 'src/**.js',
+      included: false
+    }, {
+      pattern: 'spec/**.js',
+      included: false
+    }, {
+      pattern: 'spec/test-main.js',
+      included: true
+    }],
 
-    // list of files to exclude
-    exclude: [
-
-    ],
+    exclude: [],
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit'
