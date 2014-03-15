@@ -14,7 +14,10 @@
     "karma-phantomjs-launcher": "*",
     "karma": "*",
     "karma-expect": "*",
-    "karma-mocha": "*"
+    "karma-mocha": "*",
+    "bower": "*",
+    "grunt-bower-requirejs": "*"
+
   },
   "scripts": {
     "test": "bower install && grunt test:full"
