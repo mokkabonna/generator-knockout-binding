@@ -19,9 +19,17 @@
           tasks: ['jshint', 'karma:server:run']
         }
       },
+      bower: {
+        tests: {
+          rjsConfig: 'spec/test-main.js',
+          options: {
+            baseUrl: './'
+          }
+        }
+      },
       bowerVerify: {
         test: {
-          tasks: ['karma:once']
+          tasks: ['bower', 'karma:once']
         }
       },
       karma: {
