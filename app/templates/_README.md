@@ -19,10 +19,11 @@ This binding is written in AMD. It returns the binding object. It will attach it
 
 ```
 requirejs.config({
-    config: {
-        'bower_components/knockout.bindingHandlers.<%=name%>/src/<%=name%>': {
-            name: 'someOtherName'
+  config: {
+    'bower_components/knockout.bindingHandlers.<%=name%>/src/<%=name%>': {
+        name: 'someOtherName'
     }
+  }
 });
 ```
 
