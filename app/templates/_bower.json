@@ -9,6 +9,14 @@
     "karma.conf.js",
     "package.json"
   ],
+  "keywords": [
+    "knockout",
+    "knockout.js",
+    "binding",
+    "bindingHandlers",
+    "amd",
+    "<%= name %>"
+  ],
   "dependencies": {
     "knockout.js": ">=2.1.0"
   },
