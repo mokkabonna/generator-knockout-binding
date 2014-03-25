@@ -13,7 +13,7 @@ var KnockoutBindingGenerator = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
 
     if (fs.existsSync(existingBower)) {
-      this.existing = require(existingBower);
+      this.existingBindingName = require(existingBower).name.split('.').pop();
     }
 
     if (fs.existsSync(existingReadme)) {
@@ -38,7 +38,7 @@ var KnockoutBindingGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       name: 'name',
       message: 'What is the name of your binding? knockout.bindingHandlers.',
-      default: this.existing ? this.existing.name.split('.').pop() : ''
+      default: this.existingBindingName
     }, {
       name: 'username',
       message: 'What is your github username? Used for travis build images.',
